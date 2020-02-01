@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/xiaomi/msm8937-common
+VENDOR_PATH := device/asus/msm8937-common
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -42,10 +42,6 @@ TARGET_SCREEN_WIDTH := 720
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# Ambient display
-PRODUCT_PACKAGES += \
-    XiaomiDoze
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -130,10 +126,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.1-service.clearkey
-
-# Fingerprint sensor
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8937
 
 # FM
 PRODUCT_PACKAGES += \
@@ -361,10 +353,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_8937
-
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
@@ -406,4 +394,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Inherit common proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/msm8937-common/msm8937-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/msm8937-common/msm8937-common-vendor.mk)

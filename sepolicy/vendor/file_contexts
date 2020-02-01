@@ -1,6 +1,3 @@
-# Biometric
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_msm8937 u:object_r:hal_fingerprint_msm8937_exec:s0
-
 # Block devices
 /dev/block/bootdevice/by-name/persist		u:object_r:persist_block_device:s0
 /dev/block/bootdevice/by-name/userdata          u:object_r:userdata_block_device:s0
@@ -45,10 +42,6 @@
 
 # RTC
 /sys/devices/soc/qpnp-rtc-7/rtc/rtc0/hctosys            u:object_r:sysfs_rtc:s0
-
-# Touch
-/sys/devices/soc/78b7000.i2c/i2c-3/3-[0-9a-f]+/disable_keys   u:object_r:touch_sysfs:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi_8937 u:object_r:hal_lineage_touch_default_exec:s0
 
 # Light
 /sys/devices/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?    u:object_r:sysfs_leds:s0
