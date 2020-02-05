@@ -155,3 +155,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+
+# CheckJNI
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.checkjni=1
